@@ -6,4 +6,4 @@
 * Human.
 * Chimera.
 
-etc..
+etc...
