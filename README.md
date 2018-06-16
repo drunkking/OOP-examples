@@ -1,7 +1,7 @@
 # OOP-examples
 
 * Simple human.
-* Space ship.
+* Space ship. <br>
 //* Army.
 //* Human.
 //* Chimera.
