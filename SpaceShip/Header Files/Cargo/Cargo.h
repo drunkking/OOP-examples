@@ -5,7 +5,7 @@
 class Cargo {
 public:
 	Cargo() {}
-	Cargo(std::string, const std::string);
+	Cargo(const std::string, const std::string);
 	virtual ~Cargo() {}
 
 	void SetName(const std::string&);
