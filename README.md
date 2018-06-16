@@ -9,6 +9,7 @@ Based on Freeelancer 2003 <br>
     3. Add weapons, cargo, engines, shields.<br>
     4. Operaotrs. <br>
     5. Add menu. <br>
+    template interface.... :(, in next exapmles. 
 //* Army. <br>
 //* Human. <br>
 //* Chimera. <br>
