@@ -2,6 +2,6 @@
 
 * Simple human.
 * Space ship. <br>
-//* Army.
-//* Human.
-//* Chimera.
+//* Army. <br>
+//* Human. <br>
+//* Chimera. <br>
