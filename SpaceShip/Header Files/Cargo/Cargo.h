@@ -5,13 +5,13 @@
 class Cargo {
 public:
 	Cargo() {}
-	Cargo(std::string name, const std::string faction_name);
+	Cargo(std::string, const std::string);
 	virtual ~Cargo() {}
 
-	void SetName(const std::string& name);
+	void SetName(const std::string&);
 	std::string GetCargoName() const;
 
-	void SetFactionName(const std::string& faction_name);
+	void SetFactionName(const std::string&);
 	std::string GetFactionName() const;
 
 	friend std::ostream& operator<< (std::ostream&, const Cargo&);
