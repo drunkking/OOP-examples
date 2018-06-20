@@ -4,18 +4,16 @@ Fighter_R1SERIES_P_Skeleton::Fighter_R1SERIES_P_Skeleton() :
 	hull_strength_(4300),
 	max_shield_class_(8),
 	cargo_space_(50),
-	max_impulse_speed_(80),
-	price_(1395000) {
+	max_impulse_speed_(80) {
 
 }
 
-Fighter_R1SERIES_P_Skeleton::Fighter_R1SERIES_P_Skeleton(const std::string& faction):
-	SpaceShip(faction),
+Fighter_R1SERIES_P_Skeleton::Fighter_R1SERIES_P_Skeleton(const std::string& faction, const int& price):
+	SpaceShip(faction, price),
 	hull_strength_(4300),
 	max_shield_class_(8),
 	cargo_space_(50),
-	max_impulse_speed_(80),
-	price_(1395000) {
+	max_impulse_speed_(80) {
 
 }
 
@@ -44,7 +42,7 @@ int Fighter_R1SERIES_P_Skeleton::GetMaxImpulseSpeed() const {
 }
 
 int Fighter_R1SERIES_P_Skeleton::GetPrice() const {
-	return price_;
+	return SpaceShip::price_;
 }
 
 std::ostream& operator<< (std::ostream& out, const Fighter_R1SERIES_P_Skeleton& ship) {

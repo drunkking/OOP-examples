@@ -4,18 +4,16 @@ Fighter_MJ1_Gecko_Council::Fighter_MJ1_Gecko_Council() :
 	hull_strength_(4100),
 	max_shield_class_(8),
 	cargo_space_(45),
-	max_impulse_speed_(80),
-	price_(980000) {
+	max_impulse_speed_(80) {
 
 }
 
-Fighter_MJ1_Gecko_Council::Fighter_MJ1_Gecko_Council(const std::string& faction):
-	SpaceShip(faction),
+Fighter_MJ1_Gecko_Council::Fighter_MJ1_Gecko_Council(const std::string& faction, const int& price):
+	SpaceShip(faction, price),
 	hull_strength_(4100),
 	max_shield_class_(8),
 	cargo_space_(45),
-	max_impulse_speed_(80),
-	price_(980000) {
+	max_impulse_speed_(80) {
 
 }
 
@@ -44,7 +42,7 @@ int Fighter_MJ1_Gecko_Council::GetMaxImpulseSpeed() const {
 }
 
 int Fighter_MJ1_Gecko_Council::GetPrice() const {
-	return price_;
+	return SpaceShip::price_;
 }
 
 std::ostream& operator<< (std::ostream& out, const Fighter_MJ1_Gecko_Council& ship) {

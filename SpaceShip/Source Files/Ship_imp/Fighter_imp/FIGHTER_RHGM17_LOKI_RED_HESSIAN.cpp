@@ -4,18 +4,16 @@ Fighter_RHGM17_Loki_Red_Hessian::Fighter_RHGM17_Loki_Red_Hessian() :
 	hull_strength_(8400),
 	max_shield_class_(9),
 	cargo_space_(45),
-	max_impulse_speed_(80),
-	price_(1675000) {
+	max_impulse_speed_(80) {
 
 }
 
-Fighter_RHGM17_Loki_Red_Hessian::Fighter_RHGM17_Loki_Red_Hessian(const std::string& faction):
-	SpaceShip(faction),
+Fighter_RHGM17_Loki_Red_Hessian::Fighter_RHGM17_Loki_Red_Hessian(const std::string& faction, const int& price):
+	SpaceShip(faction, price),
 	hull_strength_(8400),
 	max_shield_class_(9),
 	cargo_space_(45),
-	max_impulse_speed_(80),
-	price_(1675000) {
+	max_impulse_speed_(80) {
 
 }
 
@@ -45,7 +43,7 @@ int Fighter_RHGM17_Loki_Red_Hessian::GetMaxImpulseSpeed() const {
 }
 
 int Fighter_RHGM17_Loki_Red_Hessian::GetPrice() const {
-	return price_;
+	return SpaceShip::price_;
 }
 
 std::ostream& operator<< (std::ostream& out, const Fighter_RHGM17_Loki_Red_Hessian& ship) {
