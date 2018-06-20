@@ -2,9 +2,8 @@
 
 * Simple human.
 * Space ship. <br>
-Based on Freeelancer 2003. <br>
-Good example of bad design. <br>
-   
-//* Army. <br>
-//* Human. <br>
+Good example of bad design. <br>   
+* Human. <br>
+Task: <br>
+1. do a proper design. <br>
 //* Chimera. <br>
