@@ -4,18 +4,16 @@ Gunboat_Kusari_Ashikaga::Gunboat_Kusari_Ashikaga() :
 	hull_strength_(115000),
 	max_shield_class_(5),
 	cargo_space_(350),
-	max_impulse_speed_(80),
-	price_(28000000) {
+	max_impulse_speed_(80) {
 
 }
 
-Gunboat_Kusari_Ashikaga::Gunboat_Kusari_Ashikaga(const std::string& faction):
-	SpaceShip(faction),
+Gunboat_Kusari_Ashikaga::Gunboat_Kusari_Ashikaga(const std::string& faction, const int& price):
+	SpaceShip(faction, price),
 	hull_strength_(115000),
 	max_shield_class_(5),
 	cargo_space_(350),
-	max_impulse_speed_(80),
-	price_(28000000) {
+	max_impulse_speed_(80) {
 
 }
 
@@ -44,7 +42,7 @@ int Gunboat_Kusari_Ashikaga::GetMaxImpulseSpeed() const {
 }
 
 int Gunboat_Kusari_Ashikaga::GetPrice() const {
-	return price_;
+	return SpaceShip::price_;
 }
 
 std::ostream& operator<< (std::ostream& out, const Gunboat_Kusari_Ashikaga& ship) {

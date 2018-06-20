@@ -4,18 +4,16 @@ Gunboat_T883GB_Ahoudari::Gunboat_T883GB_Ahoudari() :
 	hull_strength_(115000),
 	max_shield_class_(8),
 	cargo_space_(430),
-	max_impulse_speed_(80),
-	price_(39000000) {
+	max_impulse_speed_(80) {
 
 }
 
-Gunboat_T883GB_Ahoudari::Gunboat_T883GB_Ahoudari(const std::string& faction) :
-    SpaceShip(faction),
+Gunboat_T883GB_Ahoudari::Gunboat_T883GB_Ahoudari(const std::string& faction, const int& price) :
+    SpaceShip(faction, price),
 	hull_strength_(115000),
 	max_shield_class_(8),
 	cargo_space_(430),
-	max_impulse_speed_(80),
-	price_(39000000){
+	max_impulse_speed_(80) {
 
 }
 
@@ -44,7 +42,7 @@ int Gunboat_T883GB_Ahoudari::GetMaxImpulseSpeed() const {
 }
 
 int Gunboat_T883GB_Ahoudari::GetPrice() const {
-	return price_;
+	return SpaceShip::price_;
 }
 
 std::ostream& operator<< (std::ostream& out, const Gunboat_T883GB_Ahoudari& ship) {

@@ -4,18 +4,18 @@ Gunboat_CTE12400_Condor::Gunboat_CTE12400_Condor() :
 	hull_strength_(125000),
 	max_shield_class_(8),
 	cargo_space_(450),
-	max_impulse_speed_(80),
-	price_(30000000) {
+	max_impulse_speed_(80) {
 
 }
+//kreiram objekatat std::string&, int& ne moram da prosledim referencu nema kopiranja
+//mozda izbacim, nema veze sad 
 
-Gunboat_CTE12400_Condor::Gunboat_CTE12400_Condor(const std::string& faction) :
-	SpaceShip(faction),
+Gunboat_CTE12400_Condor::Gunboat_CTE12400_Condor(const std::string& faction, const int& price) :
+	SpaceShip(faction, price),
 	hull_strength_(125000),
 	max_shield_class_(8),
 	cargo_space_(450),
-	max_impulse_speed_(80),
-	price_(30000000) {
+	max_impulse_speed_(80){
 
 }
 
@@ -44,7 +44,7 @@ int Gunboat_CTE12400_Condor::GetMaxImpulseSpeed() const {
 }
 
 int Gunboat_CTE12400_Condor::GetPrice() const {
-	return price_;
+	return SpaceShip::price_;
 }
 
 std::ostream& operator<< (std::ostream& out, const Gunboat_CTE12400_Condor& ship) {
