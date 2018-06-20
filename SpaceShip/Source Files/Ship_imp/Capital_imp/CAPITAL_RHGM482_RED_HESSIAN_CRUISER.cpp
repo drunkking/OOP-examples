@@ -4,18 +4,16 @@ Capital_RHGM482_Red_Hessian_Cruiser::Capital_RHGM482_Red_Hessian_Cruiser() :
 	hull_strength_(350000),
 	max_shield_class_(9),
 	cargo_space_(800),
-	max_impulse_speed_(70),
-	price_(205000000) {
+	max_impulse_speed_(70) {
 
 }
 
-Capital_RHGM482_Red_Hessian_Cruiser::Capital_RHGM482_Red_Hessian_Cruiser(const std::string& faction):
-	SpaceShip(faction),
+Capital_RHGM482_Red_Hessian_Cruiser::Capital_RHGM482_Red_Hessian_Cruiser(const std::string& faction, const int& price):
+	SpaceShip(faction, price),
 	hull_strength_(350000),
 	max_shield_class_(9),
 	cargo_space_(800),
-	max_impulse_speed_(70),
-	price_(205000000) {
+	max_impulse_speed_(70) {
 
 }
 
@@ -44,7 +42,7 @@ int Capital_RHGM482_Red_Hessian_Cruiser::GetMaxImpulseSpeed() const {
 }
 
 int Capital_RHGM482_Red_Hessian_Cruiser::GetPrice() const {
-	return price_;
+	return SpaceShip::price_;
 }
 
 

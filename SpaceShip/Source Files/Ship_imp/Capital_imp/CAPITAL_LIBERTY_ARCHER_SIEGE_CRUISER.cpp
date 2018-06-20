@@ -4,18 +4,16 @@ Capital_Liberty_Archer_Siege_Cruiser::Capital_Liberty_Archer_Siege_Cruiser() :
 	hull_strength_(295000),
 	max_shield_class_(9),
 	cargo_space_(800),
-	max_impulse_speed_(70),
-	price_(147000000) {
+	max_impulse_speed_(70) {
 
 }
 
-Capital_Liberty_Archer_Siege_Cruiser::Capital_Liberty_Archer_Siege_Cruiser(const std::string& faction):
-	SpaceShip(faction),
+Capital_Liberty_Archer_Siege_Cruiser::Capital_Liberty_Archer_Siege_Cruiser(const std::string& faction, const int& price):
+	SpaceShip(faction, price),
 	hull_strength_(295000),
 	max_shield_class_(9),
 	cargo_space_(800),
-	max_impulse_speed_(70),
-	price_(147000000) {
+	max_impulse_speed_(70) {
 
 }
 
@@ -45,7 +43,7 @@ int Capital_Liberty_Archer_Siege_Cruiser::GetMaxImpulseSpeed() const {
 }
 
 int Capital_Liberty_Archer_Siege_Cruiser::GetPrice() const {
-	return price_;
+	return SpaceShip::price_;
 }
 
 std::ostream& operator<< (std::ostream& out, const Capital_Liberty_Archer_Siege_Cruiser& ship) {
